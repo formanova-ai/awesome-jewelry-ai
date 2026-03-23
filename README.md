@@ -38,17 +38,29 @@ Contributions welcome. Please read the [contributing guidelines](#contributing) 
 
 ### Jewelry-Specific AI
 
-**[DreamSalon: A Staged Diffusion Framework for Preserving Identity-Context in Editable Image Generation](https://openaccess.thecvf.com/content/CVPR2024/papers/Lin_DreamSalon_A_Staged_Diffusion_Framework_for_Preserving_Identity-Context_in_Editable_CVPR_2024_paper.pdf)**
-*CVPR 2024*
-A staged diffusion framework that preserves fine identity details during image editing. Directly relevant to jewelry try-on scenarios where the wearer's identity and the jewelry's fine geometry must both survive the generation process.
-
-**[ID-Booth: Identity-Consistent Face Generation with Diffusion Models](https://arxiv.org/abs/2504.07392)**
+**[Jewelry Recognition via Encoder-Decoder Models](https://arxiv.org/abs/2401.08003)**
 *arXiv 2024*
-A diffusion-based framework for generating diverse images while maintaining consistent identity representation. Achieves Fréchet Distance of 1159.54 vs. 1371.13 for DreamBooth. Applicable to virtual try-on systems requiring consistent product rendering across model images.
+An image captioning approach simulates expert analysis to generate detailed, natural language descriptions of jewelry, facilitating granular classification of materials, colors, and designs. This methodology is applicable to automated inventory management and e-commerce, offering precise identification of accessories.
 
-**[LD-BFR: Vector-Quantization-Based Face Restoration Model](https://dl.acm.org/doi/abs/10.1145/3664647.3680853)**
-*ACM 2024*
-Demonstrates that the approach preserves fine details like earrings and jewelry that GAN-based methods typically destroy - validating that jewelry poses a specific, documented challenge for restoration models.
+**[PM-Jewelry: Personalized Multimodal Adaptation for Virtual Jewelry Try-On with Latent Diffusion](https://openreview.net/pdf/c8ac5694038fd3ee87afa1913c8c711d5906cbcd.pdf)**
+*OpenReview 2024*
+A virtual try-on framework using a latent diffusion model to create realistic, personalized simulations of jewelry by integrating multimodal data like text and images. The system, which supports diverse jewelry types, ensures precise, tailored experiences for users through advanced material rendering and adaptation techniques.
+
+**[Automatic Identification and Description of Jewelry through Computer Vision and Neural Networks for Translators and Interpreters](https://arxiv.org/pdf/2509.00661)**
+*arXiv 2025*
+VGG-16 + GRU encoder-decoder achieving 93.45% classification accuracy across 4 jewelry categories (necklaces, rings, earrings, bracelets) and generating multi-level descriptions. Dataset: 5,374 images from Spanish jewelry stores.
+
+**[Generative Artificial Intelligence as a Tool for Jewelry Design](https://www.gia.edu/gems-gemology/fall-2024-artificial-intelligence-in-jewelry-design)**
+*GIA Gems & Gemology, Fall 2024*
+Gemological Institute of America evaluation of generative AI programs (Midjourney, DALL-E, and others) applied to jewelry design. Addresses both the creative potential and documented failure modes, including hallucinated compositions and ethical/IP concerns.
+
+**[From Jewellery Design Sketch to Realistic Product Imagery Using Gemini Artificial Intelligence](https://rsisinternational.org/journals/ijriss/uploads/vol10-iss1-pg6821-6828-202602_pdf.pdf)**
+*RSIS International 2025*
+An AI-assisted workflow for converting jewelry sketches into realistic, professional-grade product imagery. Directly relevant to rapid prototyping and design visualization, where maintaining high fidelity to original sketches and material textures is essential for commercial viability.
+
+**[GlamTry: Advancing Virtual Try-On for High-End Accessories](https://arxiv.org/pdf/2409.14553)**
+*arXiv 2024*
+A customized 2D virtual try-on model that integrates VITON-HD techniques with MediaPipe Hand Landmarker to locate and render accessories. Directly relevant to jewelry and watch retail where precise placement and specialized datasets are required to bridge the gap left by clothing-centric models.
 
 **[Catch Missing Details: Image Reconstruction with Frequency-Augmented Variational Autoencoder](https://openaccess.thecvf.com/content/CVPR2023/papers/Lin_Catch_Missing_Details_Image_Reconstruction_With_Frequency_Augmented_Variational_Autoencoder_CVPR_2023_paper.pdf)**
 *CVPR 2023*
@@ -62,17 +74,9 @@ First benchmark for detecting reflected objects in AI models. Contains 21,059 im
 *arXiv 2023*
 Documents that SAM achieves only 48.47% IoU on glass/reflective objects vs. 88.16% for specialized methods. Direct evidence that standard segmentation pipelines fail on the reflective metal and gemstone surfaces that define jewelry.
 
-**[Automatic Identification and Description of Jewelry Through Neural Networks](https://arxiv.org/pdf/2509.00661)**
-*arXiv 2025*
-VGG-16 + GRU encoder-decoder achieving 93.45% classification accuracy across 4 jewelry categories (necklaces, rings, earrings, bracelets) and generating multi-level descriptions. Dataset: 5,374 images from Spanish jewelry stores.
-
 **[Generative AI in Product Photography: Human-Directed Transfer-based Visual Workflows](https://www.researchgate.net/publication/401881759_Generative_AI_in_Product_Photography_Human-Directed_Transfer-based_Visual_Workflows)**
 *ResearchGate 2024*
 Examines how generative AI has entered commercial visual production and what human-directed workflows are necessary for professional-grade outputs. Useful framework for understanding where automation ends and oversight begins.
-
-**[Generative Artificial Intelligence as a Tool for Jewelry Design](https://www.gia.edu/gems-gemology/fall-2024-artificial-intelligence-in-jewelry-design)**
-*GIA Gems & Gemology, Fall 2024*
-Gemological Institute of America evaluation of generative AI programs (Midjourney, DALL-E, and others) applied to jewelry design. Addresses both the creative potential and documented failure modes, including hallucinated compositions and ethical/IP concerns.
 
 ---
 
