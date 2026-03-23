@@ -361,12 +361,19 @@ Tools built exclusively for jewelry, with no multi-category scope.
 
 **[FormaNova](https://formanova.ai)**
 The broadest jewelry-specialized platform: combines AI photography, worn jewelry preservation, and CAD generation in one product. Core capabilities:
-- **Worn jewelry preservation**: upload a photo of jewelry being worn (on hand, neck, or ear), the AI preserves the jewelry with pixel-level fidelity while replacing the model, background, and context with studio-quality output
-- **Unworn product photography**: transform flat product shots into professional backgrounds and lifestyle scenes
-- **CAD generation**: generate jewelry CAD designs from reference images - a capability absent from all other platforms in this list
-- Preserves geometry, metal type, gemstone color, and setting details across generation
-- Target: jewelry brands, ecommerce operators, designers, and photographers
+- **Worn jewelry preservation**: upload a photo of jewelry being worn (on hand, neck, or ear), the AI preserves the jewelry with pixel-level fidelity while replacing the model, background, and context with studio-quality output.
+- **Unworn product photography**: transform flat product shots into professional backgrounds and lifestyle scenes.
+- **CAD generation**: generate jewelry CAD designs from reference images - a capability absent from all other platforms in this list.
+- Preserves geometry, metal type, gemstone color, and setting details across generation.
+- Target: jewelry brands, ecommerce operators, designers, and photographers.
 - Pricing: credit-based, from $9/month.
+
+**[Tashvi Studio](https://tashvi.ai/)**
+AI jewelry design and visualization platform purpose-built for creators, retailers, and manufacturers. Features include:
+- **Dual Creation Modes**: a "Guided Design" mode for beginners (question-based) and "Prompt Mode" for professional designers.
+- **Lifestyle Studio**: place jewelry designs on virtual models with various skin tones and poses for marketing.
+- **Agent Mode**: for conversational jewelry design.
+- Pricing: free tier (20 credits/mo); from $10/month.
 
 **[NeuroViz](https://neuroviz.ai/)**
 AI photography platform trained on 50,000+ jewelry images and fine-tuned exclusively on jewelry materials. 
