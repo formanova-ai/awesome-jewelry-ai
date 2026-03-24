@@ -120,32 +120,17 @@ No formal paper published. Architecture is believed to be diffusion-based with p
 *Google AI Developer Documentation*
 Gemini's native image generation via the Gemini API and Google AI Studio. Includes SynthID digital watermarking. Designed for conversational image generation and editing; not architected for reference-guided product fidelity.
 
-**[Stable Diffusion 3.5](https://stability.ai/news/introducing-stable-diffusion-3-5) - Stability AI**
+**[Stable Diffusion 3.5](https://stability.ai/news/introducing-stable-diffusion-3-5)**
+*Stability AI*
+Features a Multimodal Diffusion Transformer (MMDiT) architecture available in Large (8B), Large Turbo, and Medium (2B) variants. It offers significant improvements over SDXL in complex prompt adherence and high-resolution details. While it is the strongest open-source foundation for building custom, fine-tuned jewelry pipelines, preserving exact jewelry geometry still requires community-developed adapters like ControlNet or IP-Adapter.
 
-| Capability | Assessment |
-|---|---|
-| Architecture | Multimodal Diffusion Transformer (MMDiT) available in Large (8B), Large Turbo, and Medium (2B) variants |
-| Detail retention | Significant improvements over SDXL in complex prompt adherence, high-resolution details, and typography |
-| Reference guidance | Requires community-developed adapters (ControlNet, IP-Adapter) to preserve exact jewelry geometry |
-| Best use for jewelry | The strongest open-source foundation for building fully custom, fine-tuned jewelry pipelines, bespoke LoRAs, and local enterprise deployments |
+**[Qwen-Image / Qwen-Image-2501](https://github.com/QwenLM/Qwen-Image)**
+*Alibaba Cloud*
+A 20B parameter MMDiT model with continuous iterative updates (including the 2501 iteration). It features state-of-the-art native text rendering, layout coherence, and fine natural texture generation for materials and reflections. A dedicated `Qwen-Image-Edit` variant supports precise instruction-based editing, though exact pixel-perfect identity preservation for complex jewelry still requires fine-tuning.
 
-**[Qwen-Image / Qwen-Image-2501](https://github.com/QwenLM/Qwen-Image) - Alibaba Cloud**
-
-| Capability | Assessment |
-|---|---|
-| Architecture | 20B MMDiT model with continuous iterative updates (e.g., 2501, 2512, 2.0) |
-| Detail retention | Features state-of-the-art native text rendering, layout coherence, and fine natural texture rendering (materials, reflections) |
-| Reference guidance | Includes a dedicated `Qwen-Image-Edit` variant for precise, instruction-based image editing, though exact pixel-perfect identity preservation of complex jewelry still requires fine-tuning |
-| Best use for jewelry | Creating promotional graphics, posters, and magazine covers where typography, brand text, and jewelry imagery must be seamlessly integrated |
-
-**[Z-Image / Z-Image-Turbo](https://github.com/Tongyi-MAI/Z-Image) - Tongyi-MAI (Alibaba)**
-
-| Capability | Assessment |
-|---|---|
-| Architecture | 6B parameter Scalable Single-Stream DiT (S3-DiT) optimized for blazing fast generation speeds |
-| Detail retention | High photorealism and robust bilingual text rendering (English/Chinese) |
-| Reference guidance | The `Z-Image-Omni-Base` and `Z-Image-Edit` versions support natural language editing capabilities, but lack native structural control for specific jewelry CADs |
-| Best use for jewelry | High-volume generation of lifestyle environments and conceptual jewelry mockups where extremely low latency (sub-second on Turbo) is required |
+**[Z-Image / Z-Image-Turbo](https://github.com/Tongyi-MAI/Z-Image)**
+*Tongyi-MAI (Alibaba)*
+A 6B parameter Scalable Single-Stream DiT (S3-DiT) optimized for blazing fast generation speeds. It provides high photorealism and robust bilingual text rendering. The Omni-Base and Edit versions support natural language editing capabilities but lack native structural control for specific jewelry CADs, making it best suited for high-volume conceptual mockups where extremely low latency is required.
 
 ---
 
