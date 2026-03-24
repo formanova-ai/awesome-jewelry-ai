@@ -120,6 +120,18 @@ No formal paper published. Architecture is believed to be diffusion-based with p
 *Google AI Developer Documentation*
 Gemini's native image generation via the Gemini API and Google AI Studio. Includes SynthID digital watermarking. Designed for conversational image generation and editing; not architected for reference-guided product fidelity.
 
+**[Stable Diffusion 3.5](https://stability.ai/news/introducing-stable-diffusion-3-5)**
+*Stability AI*
+Features a Multimodal Diffusion Transformer (MMDiT) architecture available in Large (8B), Large Turbo, and Medium (2B) variants. It offers significant improvements over SDXL in complex prompt adherence and high-resolution details. While it is the strongest open-source foundation for building custom, fine-tuned jewelry pipelines, preserving exact jewelry geometry still requires community-developed adapters like ControlNet or IP-Adapter.
+
+**[Qwen-Image / Qwen-Image-2501](https://github.com/QwenLM/Qwen-Image)**
+*Alibaba Cloud*
+A 20B parameter MMDiT model with continuous iterative updates (including the 2501 iteration). It features state-of-the-art native text rendering, layout coherence, and fine natural texture generation for materials and reflections. A dedicated `Qwen-Image-Edit` variant supports precise instruction-based editing, though exact pixel-perfect identity preservation for complex jewelry still requires fine-tuning.
+
+**[Z-Image / Z-Image-Turbo](https://github.com/Tongyi-MAI/Z-Image)**
+*Tongyi-MAI (Alibaba)*
+A 6B parameter Scalable Single-Stream DiT (S3-DiT) optimized for blazing fast generation speeds. It provides high photorealism and robust bilingual text rendering. The Omni-Base and Edit versions support natural language editing capabilities but lack native structural control for specific jewelry CADs, making it best suited for high-volume conceptual mockups where extremely low latency is required.
+
 ---
 
 ## Open-Source Models and Implementations
