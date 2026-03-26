@@ -20,6 +20,7 @@ Contributions welcome. Please read the [contributing guidelines](#contributing) 
   - [Gemstone and Mineral](#gemstone-and-mineral)
   - [Reflective and Metallic Objects](#reflective-and-metallic-objects)
   - [Virtual Try-On Reference](#virtual-try-on-reference)
+  - [Dataset Curation and Preparation](#dataset-curation-and-preparation)
 - [Evaluation Metrics and Tools](#evaluation-metrics-and-tools)
 - [Production Tools](#production-tools)
   - [Jewelry-Specialized AI Platforms](#jewelry-specialized-ai-platforms)
@@ -315,6 +316,49 @@ Diverse metallic object dataset addressing symmetry, texturelessness, and high r
 
 **[Awesome Virtual Try-On - GitHub](https://github.com/minar09/awesome-virtual-try-on)**
 Curated list of VTON research, code, and datasets. Primarily clothing-focused; jewelry-specific resources are sparse, representing an active gap.
+
+### Dataset Curation and Preparation
+
+#### Field Notes: Building a Production Jewelry Training Dataset
+
+The following observations come from building a production training dataset for a jewelry AI photography platform serving commercial brands. They document failure modes and pipeline decisions that are not covered in generalist fine-tuning guides.
+
+**Standards definition precedes data collection**
+
+Effective jewelry training datasets are not assembled by collecting images and then filtering — the filter criteria must be defined before collection begins. The practical starting point is working with target brands to understand what their imagery must never look like, not just what it should look like. Brands operate with codified aesthetic standards: a brand producing high-end pieces on neutral studio backgrounds has different requirements from one producing editorial lifestyle content. Collecting first and filtering later produces datasets that reflect what was available, not what the model should learn.
+
+**Structured human QA with cross-checking**
+
+Annotation quality degrades at scale without enforced review structure. A working pattern: curators annotate in teams and cross-check each other's work before submission; a senior annotator performs final QA as a separate pass. The separation between annotation and QA must be maintained — the same person should not annotate and approve the same image. This produces measurably higher mask boundary accuracy than single-pass annotation at equivalent team size.
+
+**Aesthetic filtering: specific patterns to eliminate**
+
+Raw brand catalog data contains images that brands actively chose not to publish. Common patterns that must be filtered before training:
+
+- Images with a composited or "pasted" appearance — jewelry looks placed rather than worn; the model learns unconvincing placement
+- Skin texture anomalies: patches, irregular tones, or skin that reads as digitally altered — the model will reproduce these as expected outputs
+- Excessive grain or film simulation — if no image in the training set exhibits this property, the model will not produce it; if some do, the model will treat it as acceptable
+- Non-worn product shots mixed into worn-model training sets — the two image types require separate datasets; mixing them produces a model that cannot consistently distinguish context
+
+**Near-duplicate elimination via perceptual hashing**
+
+In catalog datasets, a common pattern is sets of images where the background, lighting, model, and pose are identical but the jewelry piece differs. These are not unique training examples — from the model's perspective, the only thing that changed is the piece, which causes the model to associate the background/context more strongly than the jewelry itself. Manual deduplication at catalog scale is impractical. Perceptual hashing (pHash or dHash) with a configurable similarity threshold identifies these sets automatically. The threshold requires calibration per dataset: too aggressive and variant colorway shots are deleted; too permissive and near-duplicates survive.
+
+**Mask quality beyond raw SAM output**
+
+SAM produces plausible jewelry masks but its raw output is not training-ready. The documented issue: at jewelry boundaries — particularly along fine chains, prong tips, and pavé edges — SAM output contains small numbers of jewelry pixels classified as background. These unmasked pixels are not visually obvious in the mask preview but are meaningful during training: the model interprets them as evidence that it is permitted to extend or modify the jewelry shape beyond the masked region. The result is hallucinated geometry — elongated prongs, extended chains, invented stones — on otherwise well-conditioned outputs. Fixing this requires a review pass at high zoom specifically on boundary pixels, not on mask shape overall. Teams working at scale need interfaces that surface boundary regions for review rather than full-image review, which does not catch these errors reliably.
+
+**Multi-jewelry masking completeness**
+
+A training image showing a model wearing both a necklace and earrings, where only the necklace is masked, creates an ambiguous training signal: the model is told the necklace is the target but sees unmasked earrings as part of the scene. During inference, it learns to generate earrings as part of the context rather than as separate jewelry. For jewelry brands that require brand-consistent images — where every piece on a model must belong to their catalog — this causes visible hallucination of non-brand pieces. Every piece of jewelry visible in a training image must be either masked or cropped from the frame. There is no middle ground.
+
+**Caption strategy**
+
+Prompts carry less weight than mask quality in training outcome — a well-masked dataset with minimal captions outperforms a poorly masked dataset with rich captions. That said, captions must be internally consistent: if some images are captioned with material descriptors (`18k yellow gold`, `pavé diamond setting`) and others are not, the model learns that material descriptors are optional signals rather than reliable ones. The practical recommendation: choose a caption depth (minimal or descriptive) and apply it uniformly. Mixing caption styles across a dataset produces inconsistent conditioning. The specific caption format matters less than consistency within the dataset.
+
+**Iterative training feedback loop**
+
+Dataset problems that are not visible during annotation surface during training. The expected pipeline is not linear (curate → train → deploy) but iterative: train on a candidate dataset, inspect generated outputs specifically for hallucination patterns and geometry errors, trace each failure mode back to a data pattern, correct the data, retrain. Each training run is as much a dataset audit as a model evaluation. Teams that treat the first training run as a final step consistently ship models with correctable data artifacts.
 
 ---
 
