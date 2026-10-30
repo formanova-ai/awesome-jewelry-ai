@@ -454,6 +454,9 @@ AI background removal and product photography with dedicated jewelry features. A
 **[Pebblely](https://pebblely.com/)**
 Background generation with a dedicated jewelry category. Fast and accessible for small sellers. 40 free images/month; paid plans from $19/month. API available for enterprise.
 
+**[Photoshoot.app](https://photoshoot.app/?utm_source=github_awesome_jewelry_ai&utm_medium=backlink&utm_campaign=202609_w7_backlinks)**
+AI commercial photography studio for e-commerce: studio backgrounds, lifestyle scenes and model shots generated from a single product photo. Multi-category (apparel, cosmetics, accessories, jewelry among others) — suited to jewelry white-background and scene shots. Freemium with free trial credits.
+
 ---
 
 ### Virtual Try-On Platforms
