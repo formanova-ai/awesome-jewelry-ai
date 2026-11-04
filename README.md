@@ -439,6 +439,16 @@ AI photography platform trained on 50,000+ jewelry images and fine-tuned exclusi
 - Isolated processing - images do not train third-party models.
 - Pricing: from $30/month.
 
+**[Hylo](https://tryhylo.com)**
+AI jewelry photography platform that turns a phone photo of a piece into studio-quality product, lifestyle, and on-model images, built exclusively for jewelry.
+
+- **Phone-first workflow**: upload a phone, DSLR, or flat-lay photo, pick a style, export. Results in under 60 seconds, no studio or lighting equipment needed.
+- **Product fidelity focus**: models are specialized for jewelry, preserving gemstone facets, metal reflections (gold, platinum, silver), and hallmark engravings.
+- **Retouching included**: background removal, white balance correction, and shadow cleanup.
+- Covers rings, necklaces, earrings, bracelets, bangles, watches, and brooches. Outputs are 4K and formatted for Shopify, Amazon, and Etsy requirements.
+- Target: jewelry brands, retailers, and marketplace sellers.
+- Pricing: 15 free credits, no card required; one-time credit packs from $12.
+
 ---
 
 ### General Product Photography with Jewelry Support
