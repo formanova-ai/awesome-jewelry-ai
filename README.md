@@ -439,6 +439,12 @@ AI photography platform trained on 50,000+ jewelry images and fine-tuned exclusi
 - Isolated processing - images do not train third-party models.
 - Pricing: from $30/month.
 
+**[Jewelry AI: Product Photos](https://elanorya.com/apps/jewelry-ai)**
+Android app for small jewelry sellers: from one phone photo of a ring, necklace, earring or bracelet it places the piece on a model, removes or cleans the background, applies text-instruction edits and upscales the result.
+- Model images are generated, not photographed; each output should be checked against the real piece.
+- Platform: Android.
+- Pricing: free start with a few photos, then a weekly, monthly or yearly subscription. API: no.
+
 ---
 
 ### General Product Photography with Jewelry Support
