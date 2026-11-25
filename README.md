@@ -581,6 +581,10 @@ Practical report documenting SDXL fine-tuning for jewelry. Explicitly documents 
 *Tutorial / Blog - Beginner*
 Step-by-step guide to AI background generation for jewelry product photos.
 
+**[Does AI Change Your Jewelry? 16 of 80 Photos Did](https://elanorya.com/blog/we-generated-80-jewelry-photos-16-changed-the-piece)**
+*Case Study / Blog - Intermediate*
+First-party failure check: four phone photos (ring, necklace, earrings, bangle) run once through 20 photo-edit templates of one jewelry app, and all 80 outputs compared with the source at full size. 16 of 80 changed the piece or failed the job; white packshot templates failed most, and the ring failed in 6 of 20 (prong count, band texture, stone shape). Small sample, judged by eye by the app's own team.
+
 ### Product Photography Pipelines
 
 **[How to Use Stable Diffusion to Generate Product Images - Mercity.ai](https://www.mercity.ai/blog-post/use-stable-diffusion-to-generate-product-images)**
